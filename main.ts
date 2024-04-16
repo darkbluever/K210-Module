@@ -6,8 +6,8 @@ namespace k210_models {
     //% block="init_SerialPort"
     export function initialization () {
         serial.redirect(
-        SerialPin.P1,
-        SerialPin.P2,
+        SerialPin.P8,
+        SerialPin.P9,
         BaudRate.BaudRate115200
         )
     }
