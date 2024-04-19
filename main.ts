@@ -6,8 +6,8 @@ namespace k210_models {
     //% block="init_SerialPort"
     export function initialization () {
         serial.redirect(
-        SerialPin.USB_TX,
-        SerialPin.USB_RX,
+        SerialPin.P1,
+        SerialPin.P2,
         BaudRate.BaudRate115200
         )
     }
@@ -186,7 +186,6 @@ namespace k210_models {
         let length = 0
         let opo = ""
         opo = serial.readUntil(serial.delimiters(Delimiters.Hash))
-        return opo
         if (opo[0] == "$") {
             class_num = "" + opo[1] + opo[2]
             if (class_num == "04") {
@@ -201,7 +200,6 @@ namespace k210_models {
         }
         opo = ""
         return apriltag
-
     }
 
 
@@ -268,7 +266,6 @@ namespace k210_models {
         }
         opo = ""
         return face
-
     }
 
 let len = 0
